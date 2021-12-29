@@ -1,0 +1,39 @@
+#include <stdio.h>
+int main(void) {
+ int a, b, c;
+ printf("enter the angles of a triangle(in degrees):\n");
+ printf("a=");
+ scanf("%d", &a);
+ printf("b=");
+ scanf("%d", &b);
+ printf("c=");
+ scanf("%d",&c);
+
+ if(a+ b+ c!=180)
+  printf("invalid angles\n");
+ else if(a==b && b==c)
+  printf ("equilateral triangle\n");
+ else if(a==b || b==c || c==a)
+  printf("Isosceles\n");
+ else
+  printf("scalene\n");
+return 0;
+}
+/*case1
+ clang-7 -pthread -lm -o main main.c
+ ./main
+enter the angles of a triangle(in degrees):
+a=60
+b=60
+c=60
+equilateral triangle
+
+
+case 2
+clang-7 -pthread -lm -o main main.c
+ ./main
+enter the angles of a triangle(in degrees):
+a=90
+b=45
+c=45
+Isosceles*/
